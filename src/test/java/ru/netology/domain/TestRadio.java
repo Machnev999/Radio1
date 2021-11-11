@@ -10,9 +10,8 @@ public class TestRadio {
     Radio rad = new Radio();
 
 
-    //-------------------------- переключение станций вперед-----------------------
     @Test
-    public void increaseRadioStation() {// - след станция
+    public void increaseRadioStation() {
 
         rad.setCurrentRadioStation(7);
         rad.increaseRadioStation();
@@ -20,7 +19,7 @@ public class TestRadio {
     }
 
     @Test
-    public void overIncreaseMaxRadioStation() {//- след станция после границы 9 станции
+    public void overIncreaseMaxRadioStation() {
 
         rad.setCurrentRadioStation(9);
         rad.increaseRadioStation();
@@ -28,16 +27,16 @@ public class TestRadio {
     }
 
 
-    //--------------------------переключение станций назад----------------------------------------
+    
     @Test
     public void reduceRadioStation() {
-        rad.setCurrentRadioStation(7);//-- пред станция
+        rad.setCurrentRadioStation(7);
         rad.reduceRadioStation();
         assertEquals(6, rad.getCurrentRadioStation());
     }
 
     @Test
-    public void overReduceMinRadioStation() {//-- пред станция за выходом границы в 0 станцию
+    public void overReduceMinRadioStation() {
         rad.setCurrentRadioStation(0);
         rad.reduceRadioStation();
         assertEquals(9, rad.getCurrentRadioStation());
@@ -47,9 +46,9 @@ public class TestRadio {
 
 
 
-    //-----------------------------------------увеличение громкости------------------
+    
     @Test
-    public void increaseVolume() {//-- увел гром-ти
+    public void increaseVolume() {
 
         rad.setCurrentVolume(5);
         rad.increaseVolume();
@@ -57,7 +56,7 @@ public class TestRadio {
     }
 
     @Test
-    public void increaseMaxVolume() {//-- увел максимально гром-ти
+    public void increaseMaxVolume() {
 
         rad.setCurrentVolume(10);
         rad.increaseVolume();
@@ -67,10 +66,9 @@ public class TestRadio {
 
 
 
-    //---------------------------------уменьшение громкости----------------------
-
+    
     @Test
-    public void reduceVolume() {//-- умен. гром-ти
+    public void reduceVolume() {
 
         rad.setCurrentVolume(6);
         rad.reduceVolume();
@@ -78,7 +76,7 @@ public class TestRadio {
     }
 
     @Test
-    public void reduceMinVolume() {//-- умен. мин. гром-ти
+    public void reduceMinVolume() {
 
         rad.setCurrentVolume(0);
         rad.reduceVolume();
