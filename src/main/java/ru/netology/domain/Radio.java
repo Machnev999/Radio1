@@ -10,11 +10,11 @@ public class Radio {
     private final int maxVolume = 10;
 
 
-    public int getCurrentRadioStation() { // - какая радиостанция текущая
+    public int getCurrentRadioStation() { 
         return currentRadioStation;
     }
 
-    public void setCurrentRadioStation(int currentRadioStation) {// - завершение проги,если выход за границы.вбивать пультом мы можем только от 0 до 9.
+    public void setCurrentRadioStation(int currentRadioStation) {
 
         if (currentRadioStation < minRadioStation) {
             return;
@@ -26,7 +26,7 @@ public class Radio {
     }
 
 
-    public void increaseRadioStation() {// увеличение радиостанции на 1
+    public void increaseRadioStation() {
         if (currentRadioStation < maxRadioStation) {
             currentRadioStation = currentRadioStation + 1;
         } else {
@@ -34,7 +34,7 @@ public class Radio {
         }
     }
 
-    public void reduceRadioStation() {// уменьшение радиостанции на 1
+    public void reduceRadioStation() {
         if (currentRadioStation > minRadioStation) {
             currentRadioStation = currentRadioStation - 1;
         } else {
@@ -43,7 +43,7 @@ public class Radio {
     }
 
 
-    public void increaseVolume(){// увеличение громкости на 1
+    public void increaseVolume(){
         if (currentVolume < maxVolume) {
             currentVolume = currentVolume + 1;
         }
@@ -53,7 +53,7 @@ public class Radio {
     }
 
 
-    public void reduceVolume() {// уменьшение громкости на 1
+    public void reduceVolume() {
         if (currentVolume > minVolume) {
             currentVolume = currentVolume - 1;
         } else {
